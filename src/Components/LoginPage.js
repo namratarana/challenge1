@@ -54,13 +54,13 @@ function LoginPage()
                         <span id="or">or</span>
 
                         <button className="blue-buttons" id="button1">
-                        <img  className="icon1" src={google} alt="Image is loading" />
+                        <img  className="icon1" src={google} alt="loading" />
                             <p>
                                 CONTINUE WITH GOOGLE
                             </p>
                         </button>
                         <button className="blue-buttons" id="button2">
-                            <img  className="icon2" src={fb}  alt="Image is loading"/>
+                            <img  className="icon2" src={fb}  alt="loading"/>
                             {/* <div id="icon2"> */}
                                <p> CONTINUE WITH FACEBOOK   </p>
                             {/* </div>  */}
