@@ -1,7 +1,7 @@
 @font-face 
 {
     font-family: Josefin Sans;
-    src: url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+    src: url("https://fonts.gstatic.com/s/josefinsans/v26/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_DjQbMlhLzTs.woff2");
 }
 
 .login-bg
@@ -21,7 +21,7 @@
     height: auto;
     width: 70vh;
     border-radius: 6px;
-    border: black 1px solid;
+    /* border: black 1px solid; */
 }
 
 .header
