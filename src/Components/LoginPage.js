@@ -13,12 +13,12 @@ function LoginPage()
     const validateForm = (e) =>
     {
         e.preventDefault();
-         if(email=="")
+         if(email==="")
          {
             setEmailErr("Invalid Email !");
             return;
          }
-         if(password=="")
+         if(password==="")
          {
             setPWerr("Invalid Password");
             return;
@@ -38,12 +38,12 @@ function LoginPage()
                     <form onSubmit={validateForm} action="/">
                         <label htmlFor="email" className="form-labels"> Email</label>
                         <input type="email" value={email} onChange={e=> setEmail(e.target.value)}/>
-                        {emailErr==""?null: <p className="error-msg">{emailErr}</p> }
+                        {emailErr===""?null: <p className="error-msg">{emailErr}</p> }
 
 
                         <label htmlFor="password" className="form-labels"> Password</label>
                         <input type="password" value={password} onChange={e=> setPassword(e.target.value)}/>
-                        {pwErr==""?null: <p className="error-msg">{pwErr}</p> }
+                        {pwErr===""?null: <p className="error-msg">{pwErr}</p> }
                         
                         <button className="submit-button">
                             Sign In
@@ -54,13 +54,13 @@ function LoginPage()
                         <span id="or">or</span>
 
                         <button className="blue-buttons" id="button1">
-                        <img style={{position:"absolute", left: "0.2rem"}} className="icon1" src={google} />
+                        <img style={{position:"absolute", left: "0.2rem"}} className="icon1" src={google} alt="Image is loading" />
                             <p>
                                 CONTINUE WITH GOOGLE
                             </p>
                         </button>
                         <button className="blue-buttons" id="button2">
-                            <img style={{position:"absolute", left: "0.2rem"}} src={fb} className="icon2" />
+                            <img style={{position:"absolute", left: "0.2rem"}} src={fb} className="icon2" alt="Image is loading"/>
                             {/* <div id="icon2"> */}
                                <p> CONTINUE WITH FACEBOOK   </p>
                             {/* </div>  */}
