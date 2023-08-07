@@ -77,14 +77,24 @@ input[type=email], input[type=password]
     border: none;
     border-bottom: 2px solid rgb(172, 170, 170);
 }
-p .error-msg
+.error
 {
-    margin-block-start: 0 !important;
-    margin-block-end: 0 !important;
+    display:flex;
+    align-items: center;
+    margin-top: -1em;
+}
+.red-icon
+{
+    height: 0.7em;
+    width: 0.7em;
+    margin-right: 0.5em;
 }
 .error-msg
 {
+    margin-block-start: 0 !important;
+    margin-block-end: 0 !important;
     color: red;
+    font-size: 0.8em;
 }
 .submit-button
 {
@@ -96,7 +106,7 @@ p .error-msg
     color: white;
     border-radius: 100px;
     border-style: none;
-    margin-bottom: 1em;
+    margin: 1em auto 1em;
 }
 
 #forgot-pw
@@ -158,19 +168,50 @@ p .error-msg
     position:absolute;
     left: 0.2rem;
     height: 5vh;
-    background-size: 4vh;
-    background-repeat: no-repeat;
 }
 .icon2
 {
     /* background-image: url('../Images/facebook.png'); */
     position:absolute;
-    left: 0.2rem;
-    height: 5vh;
-    background-size: 4vh;
-    background-repeat: no-repeat;
+    left: 0.1rem;
+    height: 5.6vh;
 }
 
+@media only screen and (min-width:1024px)
+{
+    .login-box
+    {
+        width: 90vh;
+    }
+    .login-text
+    {
+        font-size: 25px;
+    }
+    .header
+    {
+        height: 12vh;    
+        background-size: 11vw ;
+    }
+    .login-img
+    {
+        background-size: 30vw;
+        height: 23vh;
+    }
+    .error
+    {
+        margin-top:-1em;
+        margin-bottom: 1.2em;
+    }   
+    .error-msg
+    {
+        font-size: 12px;
+    }
+    .red-icon
+    {
+        height: 0.6em;
+        width: auto;
+    }
+}
 @media only screen and (max-width: 1024px) and (min-width:650px)
 {
     .login-bg
@@ -183,10 +224,14 @@ p .error-msg
         top:5vh;
         width: 50vh;
     }
+    .login-text
+    {
+        font-size: 20px;
+    }
     .header
     {
         height: 9vh;    
-        background-size: 20vw ;
+        background-size: 10vw ;
     }
     .login-img
     {
@@ -213,7 +258,11 @@ p .error-msg
     {
         margin-bottom: 1em;
     }
-    
+    .error
+    {
+        margin-top:-0.5em;
+        margin-bottom: 1em;
+    }    
     .blue-buttons
     {
         font-size: 10px;
@@ -229,11 +278,15 @@ p .error-msg
     .header
     {
         height: 8vh;    
-        background-size: 20vw ;
+        background-size: 17vw ;
     }
     .login-img
     {
-        background-size: 50vw;
+        background-size: 45vw;
+    }
+    .login-text
+    {
+        font-size: 15px;
     }
     form
     {   
@@ -249,6 +302,11 @@ p .error-msg
     {
         margin-bottom: 1em;
     }
+    .error
+    {
+        margin-top:-0.5em;
+        margin-bottom: 1em;
+    }   
     .submit-button
     {
         width: 100%;
@@ -258,6 +316,15 @@ p .error-msg
     .blue-buttons
     {
         font-size: 10px;
+        height: 5vh;
+    }
+    .icon1
+    {
+        height: 2.5em;
+    }
+    .icon2
+    {
+        height:3em;
     }
 }
 
@@ -271,12 +338,16 @@ p .error-msg
     .header
     {
         height: 5vh;    
-        background-size: 20vw ;
+        background-size: 15vw ;
     }
     .login-img
     {
         background-size: 40vw;
         height: 10vh;
+    }
+    .login-text
+    {
+        font-size: 13px;
     }
     form
     {   
@@ -284,26 +355,50 @@ p .error-msg
     }
     #signup, #forgot-pw
     {
-        font-size: 10px;
+        font-size: 9px;
     }
     .form-labels
     {
-        font-size: 10px;
+        font-size: 8px;
     }
 
     input[type=email], input[type=password] 
     {
         margin-bottom: 1em;
     }
+    .error
+    {
+        margin-top:-0.5em;
+        margin-bottom: 1em;
+    }   
+    .error-msg
+    {
+        font-size: 10px;
+    }
+    .red-icon
+    {
+        height: 0.5em;
+        width: auto;
+    }
     .submit-button
     {
         width: 100%;
         padding: 1em 1em 1em 1em ;
-        font-size: 12px;
+        font-size: 10px;
     }
+    
     .blue-buttons
     {
-        font-size: 8px;
+        font-size: 7px;
+        height: 4vh;
+    }
+    .icon1
+    {
+        height: 2.8em;
+    }
+    .icon2
+    {
+        height:3.2em;
     }
 
 }

@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import '../Components/LoginPage.css';
 import fb from "../Images/facebook.png"
 import google from "../Images/google.png"
+import redIcon from "../Images/redIcon.png"; 
 
 function LoginPage()
 {
@@ -15,12 +16,12 @@ function LoginPage()
         e.preventDefault();
          if(email==="")
          {
-            setEmailErr("Invalid Email !");
+            setEmailErr("The email field is required !");
             return;
          }
          if(password==="")
          {
-            setPWerr("Invalid Password");
+            setPWerr("The password field is required");
             return;
          }
          setEmail("");
@@ -38,12 +39,22 @@ function LoginPage()
                     <form onSubmit={validateForm} action="/">
                         <label htmlFor="email" className="form-labels"> Email</label>
                         <input type="email" value={email} onChange={e=> setEmail(e.target.value)}/>
-                        {emailErr===""?null: <p className="error-msg">{emailErr}</p> }
+                        {emailErr===""?null: 
+                            <div className="error">
+                                <img className="red-icon" src={redIcon} alt="red-icon"/>
+                                <p className="error-msg">{emailErr}</p>
+                            </div>
+                        }
 
 
                         <label htmlFor="password" className="form-labels"> Password</label>
                         <input type="password" value={password} onChange={e=> setPassword(e.target.value)}/>
-                        {pwErr===""?null: <p className="error-msg">{pwErr}</p> }
+                        {pwErr===""?null: 
+                        <div className="error">
+                            <img className="red-icon" src={redIcon} alt="red-icon"/>
+                            <p className="error-msg">{pwErr}</p> 
+                        </div>
+                        }
                         
                         <button className="submit-button">
                             Sign In
